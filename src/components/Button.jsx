@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-export default function Button({ children }) {
+export default function Button({ link, children }) {
   return (
-    <button className="bg-[#0FAE96] px-12 py-4 rounded-md">{children}</button>
+    <a className="bg-[#0FAE96] px-12 py-4 rounded-md" href={link}>{children}</a>
   );
 }
 

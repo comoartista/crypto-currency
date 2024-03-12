@@ -19,10 +19,12 @@ export default function Trending() {
     );
   }
 
+  console.log(responce);
+
   return (
     <section className="wrapper-container mb-40">
       <h2 className="text-2xl mb-6">Market Trend</h2>
-      <div className="flex flex-wrap sm:flex-nowrap justify-between gap-6">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-4 sm:grid-cols-2 md:justify-between w-full">
         {responce &&
           firstFour.map((coin) => (
             <CoinTrending key={coin.item.coin_id} coin={coin} />

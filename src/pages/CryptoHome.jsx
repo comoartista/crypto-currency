@@ -1,5 +1,6 @@
+import GetStarted from "../components/GetStarted";
 import Intro from "../components/Intro";
-import MarketUpdate from "../components/MarketUpdate";
+import MarketsUpdate from "../components/MarketsUpdate";
 import Trending from "../components/Trending";
 
 export default function CryptoHome() {
@@ -7,7 +8,8 @@ export default function CryptoHome() {
     <main>
       <Intro />
       <Trending />
-      <MarketUpdate />
+      <MarketsUpdate itemsPerPage={8} />
+      <GetStarted />
     </main>
   );
 }

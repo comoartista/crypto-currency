@@ -6,6 +6,9 @@ export default function MarketUpdate() {
   const { responce, loading } = useAxios(
     "coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en"
   );
+
+  const coinsSliced = responce?.slice(0, 8);
+
   if (loading) {
     return (
       <div className="wrapper-container mt-8">
@@ -32,10 +35,8 @@ export default function MarketUpdate() {
           <p>24h Change</p>
           <p>Market Cap</p>
         </div>
-        <Coin />
-        {responce && responce.map((coin) => <Coin key={coin.id} coin={coin} />)}
-        {console.log("Hello")}
-
+        {responce &&
+          coinsSliced.map((coin) => <Coin key={coin.id} coin={coin} />)}
       </div>
     </section>
   );
