@@ -6,7 +6,7 @@ export default function CoinTrending({ coin }) {
   const { item } = coin;
   return (
     <Link to={`/coin/${item.id}`}>
-      <div className="card-bg w-full px-5 py-6">
+      <div className="card-bg w-full px-5 py-6 hover:bg-[#150e23] backdrop-blur bg-opacity-50">
         <div className="flex w-full items-center justify-between gap-2 border-b border-[#251733]  mb-4 pb-4">
           <div className="flex gap-4 items-center">
             <img

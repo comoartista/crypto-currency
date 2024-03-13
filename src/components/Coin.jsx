@@ -10,7 +10,7 @@ export default function Coin({ coin }) {
 
   return (
     <Link to={`/coin/${coin.id}`}>
-      <div className="grid grid-cols-3 sm:grid-cols-4 items-center justify-between px-4 py-5 border-t-2 border-[#251733]  hover:bg-[#150e23] cursor-pointer transition-all">
+      <div className="grid grid-cols-3 sm:grid-cols-4 items-center justify-between px-4 py-5 border-t-2 border-[#251733] hover:bg-[#150e23] cursor-pointer transition-all">
         <div className="flex items-center gap-3">
           <span className="text-sm">{`${coin.market_cap_rank}.`}</span>
           <img className="w-[34px] h-[34px]" src={coin.image} alt={coin.name} />

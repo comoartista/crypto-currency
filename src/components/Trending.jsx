@@ -22,9 +22,9 @@ export default function Trending() {
   console.log(responce);
 
   return (
-    <section className="wrapper-container mb-40">
-      <h2 className="text-2xl mb-6">Market Trend</h2>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-4 sm:grid-cols-2 md:justify-between w-full">
+    <section className="wrapper-container mb-20 sm:mb-40">
+      <h2 className="text-2xl mb-4 sm:mb-6">Market Trend</h2>
+      <div className="grid grid-cols-1 gap-2 sm:gap-4 md:grid-cols-4 sm:grid-cols-2 md:justify-between w-full">
         {responce &&
           firstFour.map((coin) => (
             <CoinTrending key={coin.item.coin_id} coin={coin} />

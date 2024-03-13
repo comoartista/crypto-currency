@@ -2,20 +2,30 @@ import instagramIcon from "../icons/instagramIcon.svg";
 import fbIcon from "../icons/fbIcon.svg";
 import twitterIcon from "../icons/twitterIcon.svg";
 import YoutubeIcon from "../icons/YoutubeIcon.svg";
-import logo from "../assets/logo.svg";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
-    <footer className="wrapper-container flex gap-2 flex-col items-center my-20">
-      <img src={logo} alt="logo" />
-      <ul className="flex items-center gap-2 my-2">
-        <SocialIcon link="https://www.instagram.com/" icon={instagramIcon} />
-        <SocialIcon link="https://www.example.com/" icon={fbIcon} />
-        <SocialIcon link="https://www.example.com/" icon={twitterIcon} />
-        <SocialIcon link="https://www.example.com/" icon={YoutubeIcon} />
-      </ul>
+    <footer className="wrapper-container flex flex-col sm:flex-row gap-2 items-center justify-between my-20 border-t-2 border-[#251733] pt-10 sm:pt-6">
+      <div>
+        <div className="flex flex-col justify-center items-center sm:items-start">
+          <Logo />
+          <ul className="flex items-center gap-4 my-4 ">
+            <SocialIcon
+              link="https://www.instagram.com/"
+              icon={instagramIcon}
+            />
+            <SocialIcon link="https://www.example.com/" icon={fbIcon} />
+            <SocialIcon link="https://www.example.com/" icon={twitterIcon} />
+            <SocialIcon link="https://www.example.com/" icon={YoutubeIcon} />
+          </ul>
+        </div>
+        <small className="mt-2 text-sm text-[#B6B6B6]">
+          2021 CoinMarketCap. All rights reserved
+        </small>
+      </div>
 
-      <ul className="flex gap-3 mt-4 ">
+      <ul className="flex gap-3 mt-4 text-sm text-[#B6B6B6] ">
         <Legacy
           title="Privacy"
           link="https://www.google.com.ua/search?q=privacy&lr=-lang_ru#ip=1"
@@ -25,10 +35,6 @@ export default function Footer() {
           link="https://www.google.com.ua/search?q=privacy&lr=-lang_ru#ip=1"
         />
       </ul>
-
-      <small className="mt-2 text-sm text-[#B6B6B6]">
-        2021 CoinMarketCap. All rights reserved
-      </small>
     </footer>
   );
 }
@@ -37,7 +43,7 @@ export function SocialIcon({ icon, link }) {
   return (
     <li>
       <a href={link}>
-        <img src={icon} alt="social icon" />
+        <img className="hoverElement" src={icon} alt="social icon" />
       </a>
     </li>
   );
@@ -46,7 +52,9 @@ export function SocialIcon({ icon, link }) {
 export function Legacy({ title, link }) {
   return (
     <li>
-      <a href={link}>{title}</a>
+      <a className="hoverElement" href={link}>
+        {title}
+      </a>
     </li>
   );
 }

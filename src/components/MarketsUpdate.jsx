@@ -49,7 +49,7 @@ export default function MarketsUpdate({ itemsPerPage }) {
   console.log(currentItems);
 
   return (
-    <section id="market" className="wrapper-container ">
+    <section id="market" className="wrapper-container scroll-mt-[180px]">
       <h2 className="text-4xl mb-8">Market Update</h2>
 
       <div className="grid grid-cols-3 sm:grid-cols-4 px-4 py-5 uppercase">
@@ -69,7 +69,7 @@ export default function MarketsUpdate({ itemsPerPage }) {
         nextLabel=">"
         onPageChange={handlePageClick}
         pageRangeDisplayed={3}
-        marginPagesDisplayed={2}
+        marginPagesDisplayed={1}
         pageCount={pageCount}
         previousLabel="<"
         pageClassName="page-item"

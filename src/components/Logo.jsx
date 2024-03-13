@@ -7,7 +7,7 @@ export default function Logo() {
   return (
     <div
       onClick={() => navigate("/")}
-      className="flex items-center cursor-pointer">
+      className="flex items-center cursor-pointer z-[2]">
       <img src={logo} alt="logo" />
     </div>
   );
